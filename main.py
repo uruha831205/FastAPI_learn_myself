@@ -134,7 +134,7 @@ async def search_all_u_table(db: db_dependency):
     return result
 
 # 查詢air_shop全部的資料(使用SQL語法)
-# !!!極推薦!!! 若已在資料建立資料表，不須再建立ORM模型就即可使用
+# !!!極推薦!!! 若已在資料庫建立資料表，不須再建立ORM模型就即可使用
 @app.get('/air_shop_all/', status_code=status.HTTP_200_OK)
 async def search_all_air_shop_with_sql(db: Session = Depends(get_db_session)): #db設置的另一種方法
     result = db.execute(text('SELECT u_id, u_name, u_age, u_email FROM air_shop'))
