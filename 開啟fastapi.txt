@@ -1,0 +1,3 @@
+uvicorn 檔案名稱:建立FaspAPI()的變數名稱 --reload
+
+--relaod : 檔案有變更會自動更新
